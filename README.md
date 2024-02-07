@@ -37,5 +37,6 @@ The below steps are for segmenting and analysing single cells from bright-field 
    **Class 2** - Background
 - Manually train the model by giving reference templates for 'cells' and 'background' as shown below [OR]
 <img width="824" alt="Segmentation process" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4deb6227-806d-438e-abd7-e9e02f9de2c0">
+
 - Upload any of the already trained models, which has been uploaded in the folder 'classifier models', under 'Load Classifier' options.
 
