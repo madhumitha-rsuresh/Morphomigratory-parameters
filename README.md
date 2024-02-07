@@ -35,8 +35,22 @@ The below steps are for segmenting and analysing single cells from bright-field 
  - Settings > **Class Names** > Ok
    **Class 1** - Cells
    **Class 2** - Background
-- Manually train the model by giving reference templates for 'cells' and 'background' as shown below [OR]
+
+### 3. Training Model
+#### Method 1
+- Manually train the model by giving reference templates for 'cells' and 'background' as shown below: 
 <img width="824" alt="Segmentation process" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4deb6227-806d-438e-abd7-e9e02f9de2c0">
 
-- Upload any of the already trained models, which has been uploaded in the folder 'classifier models', under 'Load Classifier' options.
+- Click on **'Train Classifier'**
+#### Method 2
+- Some trained models have been uploaded in the folder 'classifer models' for cell types - OVCAR3 and SKOV3.
+- Click on **'Load Classifier'** and upload the given model.
+- Click on **'Create result'**
+
+**Files to Save:**
+1. 'Create result' - Save as 'classified_image_001'
+2. "Get probability' - Save as 'Probability_maps_001'
+3. Save 'Classifier model' if done by Method 1
+
+
 
