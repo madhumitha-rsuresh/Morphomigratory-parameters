@@ -1,7 +1,7 @@
-[!lab logo](https://static.wixstatic.com/media/0f3704_e795eb7b0f4c4f23851fc3d1a623c7cd~mv2.png/v1/crop/x_0,y_410,w_2160,h_361/fill/w_1315,h_220,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0f3704_e795eb7b0f4c4f23851fc3d1a623c7cd~mv2.png)
+![lab logo](https://static.wixstatic.com/media/0f3704_e795eb7b0f4c4f23851fc3d1a623c7cd~mv2.png/v1/crop/x_0,y_410,w_2160,h_361/fill/w_1315,h_220,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0f3704_e795eb7b0f4c4f23851fc3d1a623c7cd~mv2.png)
 
 # Introduction
-The given pipeline helps to quantify the morphological and migratory dynamics of cells
+The morphological state and migratory dynamics of cells are widely imaged and analyzed these days to understand cellular behavior during morphogenesis and disease progression. Here, we constructed a curated toolbox incorporating a set of parameters to quantify the morpho-migratory dynamics of cells, focusing on the flux and interdependence of the two traits. The toolbox includes fitted ellipse parameters to measure cell geometry based on elongation dynamics (example: to understand protrusion formation or retraction), cell trajectory based on turning and displacement angles (example: to differentiate directed and random motion) and cell orientation based on angle between the major axis and displacement vector.
 
 # Table of Contents
 | S.No. | Title | 
@@ -32,4 +32,10 @@ The below steps are for segmenting and analysing single cells from bright-field 
 **Note:** Refer to ImageJ Wiki Link for understanding the working of [Trainable Weka Segmentation] (https://imagej.net/plugins/tws/)
 
 #### Trainable Weka Segmentation
- - Settings > 
+ - Settings > **Class Names** > Ok
+   **Class 1** - Cells
+   **Class 2** - Background
+- Manually train the model by giving reference templates for 'cells' and 'background' as shown below [OR]
+<img width="824" alt="Segmentation process" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4deb6227-806d-438e-abd7-e9e02f9de2c0">
+- Upload any of the already trained models, which has been uploaded in the folder 'classifier models', under 'Load Classifier' options.
+
