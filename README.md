@@ -4,8 +4,8 @@ The given pipeline helps to quantify the morphological and migratory dynamics of
 # Table of Contents
 | S.No. | Title | 
 | -- | -------- |
-| 1. | [Required Softwares/Plugins] (https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#required-softwaresplugins) |
-| 2. | [Image Segementation] (https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#image-segmentation) |
+| 1. | [Required Softwares/Plugins](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#required-softwaresplugins) |
+| 2. | [Image Segementation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#image-segmentation) |
 | 3. | Binarization |
 | 4. | Analyse Particles |
 | 5. | Generation of table |
