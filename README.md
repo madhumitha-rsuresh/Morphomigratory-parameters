@@ -2,14 +2,14 @@
 The given pipeline helps to quantify the morphological and migratory dynamics of cells
 
 # Table of Contents
-S.No. | Title | 
------ | ----- |
-1. | Required Softwares/Plugins |
-2. | Image Segementation |
-3. | Binarization |
-4. | Analyse Particles |
-5. | Generation of table |
-6. | Generation of plots |
+| S.No. | Title | 
+| -- | -------- |
+| 1. | [Required Softwares/Plugins] (https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#required-softwaresplugins) |
+| 2. | [Image Segementation] (https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#image-segmentation) |
+| 3. | Binarization |
+| 4. | Analyse Particles |
+| 5. | Generation of table |
+| 6. | Generation of plots |
 
 # Required Softwares/Plugins
 - Fiji (Image processor)
@@ -25,3 +25,9 @@ The below steps are for segmenting and analysing single cells from bright-field 
   - The file should contain 't' slices, where t indicates the number of timeframes. Example: For a time-lapse of 2 hours with images taken every 2 minutes, there would be 61 frames (inclusing at point t=0).
   
 ### 2. Segmentation
+  - Open .tif file in Fiji
+  - Plugins > Segmentation > Trainable Weka Segmentation
+**Note:** Refer to ImageJ Wiki Link for understanding the working of [Trainable Weka Segmentation] (https://imagej.net/plugins/tws/)
+
+#### Trainable Weka Segmentation
+ - Settings > 
