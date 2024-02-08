@@ -7,37 +7,40 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 | S.No. | Title | 
 | -- | -------- |
 | 1. | [Required Softwares/Plugins](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#required-softwaresplugins) |
-| 2. | [Image Segementation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#image-segmentation) |
+| 2. | [Image Segementation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#image-segmentation) 
+2.1. [Saving raw file](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#1-save-your-raw-data-file-time-lapse-video-in-tif-format)
+2.2. [Segmentation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#2-segmentation)
+2.3. [Training models](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#3-training-model)
+2.4. Saving output files|
 | 3. | Binarization |
 | 4. | Analyse Particles |
 | 5. | Generation of table |
 | 6. | Generation of plots |
 
-# Required Softwares/Plugins
+# 1. Required Softwares/Plugins
 - Fiji (Image processor)
 - Trainable Weka Segmentation (plugin)
 - Codes used: ImageJ Macro, MATLAB
 
-# Image Segmentation
+# 2. Image Segmentation
 The below steps are for segmenting and analysing single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, starting from Step 3.
 
-## Step 1
-### 1. Save your raw data file (time-lapse video) in .tif format
+## 2.1. Save your raw data file (time-lapse video) in .tif format
   - Make sure the bright-field videos are of higher resolution and of lesser background noise
   - The file should contain 't' slices, where t indicates the number of timeframes. Example: For a time-lapse of 2 hours with images taken every 2 minutes, there would be 61 frames (inclusing at point t=0).
   
-### 2. Segmentation
+## 2.2. Segmentation
   - Open .tif file in Fiji
   - Plugins > Segmentation > Trainable Weka Segmentation
 **Note:** Refer to ImageJ Wiki Link for understanding the working of [Trainable Weka Segmentation] (https://imagej.net/plugins/tws/)
 
-#### Trainable Weka Segmentation
+### Trainable Weka Segmentation
  - Settings > **Class Names** > Ok
    **Class 1** - Cells
    **Class 2** - Background
 
-### 3. Training Model
-#### Method 1
+## 2.3. Training Model
+### Method 1
 - Manually train the model by giving reference templates for 'cells' and 'background' as shown below: 
 <img width="824" alt="Segmentation process" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4deb6227-806d-438e-abd7-e9e02f9de2c0">
 
@@ -47,10 +50,14 @@ The below steps are for segmenting and analysing single cells from bright-field 
 - Click on **'Load Classifier'** and upload the given model.
 - Click on **'Create result'**
 
-**Files to Save:**
-1. 'Create result' - Save as 'classified_image_001'
-2. "Get probability' - Save as 'Probability_maps_001'
-3. Save 'Classifier model' if done by Method 1
+## 2.4. Saving Output Files:
+1. **'Create result'** - Save as 'classified_image_001'
+<img width="566" alt="Classified_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/2836cb0d-e956-4f05-9c79-c1d2e331d3ee">
+
+2. **'Get probability'** - Save as 'Probability_maps_001'
+<img width="544" alt="Probability_maps" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/8e0a649c-93f2-430f-adae-679805bdabb8">
+
+3. Save **'Classifier model'** if done by Method 1
 
 
 
