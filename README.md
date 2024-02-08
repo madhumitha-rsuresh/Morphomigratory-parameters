@@ -38,7 +38,7 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
   - Plugins > Segmentation > Trainable Weka Segmentation
 <img width="667" alt="trainable_weka_segmentation" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/14f34d53-8c38-4982-b711-d3e54dbcd8c3">
 
-**Note:** Refer to ImageJ Wiki Link for understanding the working of [Trainable Weka Segmentation] (https://imagej.net/plugins/tws/)
+**Note:** Refer to ImageJ Wiki Link for understanding the working of [Trainable Weka Segmentation](https://imagej.net/plugins/tws/)
 
 ### Trainable Weka Segmentation
  - Settings > **Class Names** > Ok
