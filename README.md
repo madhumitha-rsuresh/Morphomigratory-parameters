@@ -83,6 +83,6 @@ From the obtained **'Binary_image_001'**, processing is performed to reduce back
 <img width="193" alt="Erode" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d57df4a9-6990-4e62-9ebb-944879873fcf">
 
 - Save as **'Binary_image_processed_001'**
-<img width="565" alt="Binary_image_processed" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/185673b8-5e0c-4577-a40c-3695d915ab6b">
+<img width="563" alt="Binary_image_processed" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/f2b0e022-7ff3-47c2-a322-e4122f4697a6">
 
 # 5. Analyse Particles
