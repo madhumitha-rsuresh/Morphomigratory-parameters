@@ -47,10 +47,10 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
 
 ## 2.3. Training Model
 ### Method 1
-- Manually train the model by giving reference templates for 'cells' and 'background' as shown below: 
+- Manually train the model by giving reference templates for 'cells' and 'background' as shown below.
+- Click on **'Train Classifier'** 
 <img width="824" alt="Segmentation process" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4deb6227-806d-438e-abd7-e9e02f9de2c0">
 
-- Click on **'Train Classifier'**
 #### Method 2
 - Some trained models have been uploaded in the folder 'classifer models' for cell types - OVCAR3 and SKOV3.
 - Click on **'Load Classifier'** and upload the given model.
@@ -58,7 +58,7 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
 
 ## 2.4. Saving Output Files:
 1. **'Create result'** - Save as 'classified_image_001' (.tif)
-<img width="566" alt="Classified_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/2836cb0d-e956-4f05-9c79-c1d2e331d3ee">
+<img width="563" alt="Classified_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/3495bfd3-4ae7-40bf-b5d2-7dd2174f83fa">
 
 2. **'Get probability'** - Save as 'Probability_maps_001' (.tif)
 <img width="544" alt="Probability_maps" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/8e0a649c-93f2-430f-adae-679805bdabb8">
@@ -72,7 +72,7 @@ The below steps are for converting 'probability maps' into binarised image seque
 - Image > Type 8-bit
 - Process > Binary > Make Binary > :ballot_box_with_check: Create New stack
 - - Save as 'Binary_image_001' (.tif)
-<img width="566" alt="Binarized_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/59805a7b-9cfb-4975-b6a6-54413d8bad30">
+<img width="565" alt="Binarized_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/67e2e307-6d19-4c27-9397-9f667f3fd1cf">
 
 # 4. Processing
 From the obtained **'Binary_image_001'**, processing is performed to reduce background noise. 
@@ -83,6 +83,6 @@ From the obtained **'Binary_image_001'**, processing is performed to reduce back
 <img width="193" alt="Erode" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d57df4a9-6990-4e62-9ebb-944879873fcf">
 
 - Save as **'Binary_image_processed_001'**
-<img width="563" alt="Binary_image_processed" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4668d31e-fb9e-4f67-814e-e726e8c56047">
+<img width="565" alt="Binary_image_processed" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/185673b8-5e0c-4577-a40c-3695d915ab6b">
 
 # 5. Analyse Particles
