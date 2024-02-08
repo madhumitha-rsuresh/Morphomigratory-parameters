@@ -66,12 +66,12 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
 3. Save **'Classifier model'** if done by Method 1
 
 # 3. Binarization
-The below steps are for converting 'probability maps' into binarised image sequence for further analysis.
+The below steps are for converting 'probability maps' into binarised image sequences for further analysis.
 - Open 'Probability_maps_001' in Fiji
 - Image > Colour > Split Channels > Save the first channel where **cells** are given a probability **closer to '1'** and **background** as a probability **closer to '0'**.
 - Image > Type 8-bit
 - Process > Binary > Make Binary > :ballot_box_with_check: Create New stack
-- - Save as 'Binary_image_001' (.tif)
+- Save as 'Binary_image_001' (.tif)
 <img width="565" alt="Binarized_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/67e2e307-6d19-4c27-9397-9f667f3fd1cf">
 
 # 4. Processing
