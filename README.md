@@ -19,9 +19,9 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 | 7. | Generation of plots |
 
 # 1. Required Softwares/Plugins 
-- Fiji (Image processor)![fiji logo](img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96" width = 25px height = 25px)
+- Fiji (Image processor)<img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96" width = 25px height = 25px>
 - Trainable Weka Segmentation (plugin)
-- Codes used: ImageJ Macro, MATLAB![Matlab_Logo](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482)
+- Codes used: ImageJ Macro, MATLAB<img src = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482" width = 25px height = 25px>
 
 # 2. Image Segmentation
 The below steps are for segmenting single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, starting from Step 3.
