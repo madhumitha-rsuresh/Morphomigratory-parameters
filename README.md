@@ -13,9 +13,10 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 |   | 2.3. [Training models](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#3-training-model) |
 |   | 2.4. [Saving output files](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#24-saving-output-files)|
 | 3. | Binarization |
-| 4. | Analyse Particles |
-| 5. | Generation of table |
-| 6. | Generation of plots |
+| 4. | Processing binarized image |
+| 5. | Analyse Particles |
+| 6. | Generation of table |
+| 7. | Generation of plots |
 
 # 1. Required Softwares/Plugins
 - Fiji (Image processor)
@@ -23,7 +24,7 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 - Codes used: ImageJ Macro, MATLAB
 
 # 2. Image Segmentation
-The below steps are for segmenting and analysing single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, starting from Step 3.
+The below steps are for segmenting single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, starting from Step 3.
 
 ## 2.1. Save your raw data file (time-lapse video) in .tif format
   - Make sure the bright-field videos are of higher resolution and of lesser background noise
@@ -51,13 +52,33 @@ The below steps are for segmenting and analysing single cells from bright-field 
 - Click on **'Create result'**
 
 ## 2.4. Saving Output Files:
-1. **'Create result'** - Save as 'classified_image_001'
+1. **'Create result'** - Save as 'classified_image_001' (.tif)
 <img width="566" alt="Classified_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/2836cb0d-e956-4f05-9c79-c1d2e331d3ee">
 
-2. **'Get probability'** - Save as 'Probability_maps_001'
+2. **'Get probability'** - Save as 'Probability_maps_001' (.tif)
 <img width="544" alt="Probability_maps" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/8e0a649c-93f2-430f-adae-679805bdabb8">
 
 3. Save **'Classifier model'** if done by Method 1
 
+# 3. Binarization
+The below steps are for converting 'probability maps' into binarised image sequence for further analysis.
+- Open 'Probability_maps_001' in Fiji
+- Image > Colour > Split Channels > Save the first channel where **cells** are given a probability **closer to '1'** and **background** as a probability **closer to '0'**.
+- Image > Type 8-bit
+- Process > Binary > Make Binary > :ballot_box_with_check: Create New stack
+<img width="566" alt="Binarized_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/59805a7b-9cfb-4975-b6a6-54413d8bad30">
 
+- Save as 'Binary_image_001' (.tif)
 
+# 4. Processing
+From the obtained **'Binary_image_001'**, processing is performed to reduce background noise. 
+- Process > Noise > Remove outliers > Adjust radius according to your image segmentation
+<img width="485" alt="Remove_outliers" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/694cdf43-f7e0-40d4-8c64-d78c986dcbf2">
+
+- Process > Binary > Options > Erode > Set 'iteration' according to your image segmentation
+<img width="193" alt="Erode" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d57df4a9-6990-4e62-9ebb-944879873fcf">
+
+- Save as **'Binary_image_processed_001'**
+<img width="563" alt="Binary_image_processed" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4668d31e-fb9e-4f67-814e-e726e8c56047">
+
+# 5. Analyse Particles
