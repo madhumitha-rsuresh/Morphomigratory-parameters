@@ -12,27 +12,30 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 |   | 2.2. [Segmentation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#2-segmentation) |
 |   | 2.3. [Training models](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#3-training-model) |
 |   | 2.4. [Saving output files](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#24-saving-output-files)|
-| 3. | Binarization |
-| 4. | Processing binarized image |
-| 5. | Analyse Particles |
+| 3. | [Binarization](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#3-binarization) |
+| 4. | [Processing binarized image](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#4-processing) |
+| 5. | [Analyse Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#5-analyse-particles) |
 | 6. | Generation of table |
 | 7. | Generation of plots |
 
-# 1. Required Softwares/Plugins
-- Fiji (Image processor)
+# 1. Required Softwares/Plugins 
+- Fiji (Image processor)![fiji logo](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96)
 - Trainable Weka Segmentation (plugin)
-- Codes used: ImageJ Macro, MATLAB
+- Codes used: ImageJ Macro, MATLAB![Matlab_Logo](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482)
 
 # 2. Image Segmentation
 The below steps are for segmenting single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, starting from Step 3.
 
 ## 2.1. Save your raw data file (time-lapse video) in .tif format
   - Make sure the bright-field videos are of higher resolution and of lesser background noise
-  - The file should contain 't' slices, where t indicates the number of timeframes. Example: For a time-lapse of 2 hours with images taken every 2 minutes, there would be 61 frames (inclusing at point t=0).
-  
+  - The file should contain 't' slices, where t indicates the number of timeframes. Example: For a time-lapse of 2 hours with images taken every 2 minutes, there would be 61 frames (including at point t=0).
+<img width="563" alt="raw_file" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d935ad37-6801-4afd-9510-af4aba3efa41">
+
 ## 2.2. Segmentation
   - Open .tif file in Fiji
   - Plugins > Segmentation > Trainable Weka Segmentation
+<img width="667" alt="trainable_weka_segmentation" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/14f34d53-8c38-4982-b711-d3e54dbcd8c3">
+
 **Note:** Refer to ImageJ Wiki Link for understanding the working of [Trainable Weka Segmentation] (https://imagej.net/plugins/tws/)
 
 ### Trainable Weka Segmentation
@@ -66,9 +69,8 @@ The below steps are for converting 'probability maps' into binarised image seque
 - Image > Colour > Split Channels > Save the first channel where **cells** are given a probability **closer to '1'** and **background** as a probability **closer to '0'**.
 - Image > Type 8-bit
 - Process > Binary > Make Binary > :ballot_box_with_check: Create New stack
+- - Save as 'Binary_image_001' (.tif)
 <img width="566" alt="Binarized_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/59805a7b-9cfb-4975-b6a6-54413d8bad30">
-
-- Save as 'Binary_image_001' (.tif)
 
 # 4. Processing
 From the obtained **'Binary_image_001'**, processing is performed to reduce background noise. 
