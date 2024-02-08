@@ -6,7 +6,7 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 # Table of Contents
 | S.No. | Title | 
 | -- | -------- |
-| 1. | [Required Softwares/Plugins](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#1-required-softwaresplugins--) |
+| 1. | [Required Softwares/Plugins](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#1-required-softwaresplugins--) |
 | 2. | [Image Segmentation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#2-image-segmentation) 
 |   | 2.1. [Saving raw file](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#21-save-your-raw-data-file-time-lapse-video-in-tif-format) |
 |   | 2.2. [Segmentation](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#2-image-segmentation) |
