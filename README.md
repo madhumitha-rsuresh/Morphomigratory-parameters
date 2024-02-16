@@ -104,5 +104,6 @@ Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale
 
 # 6. Generation of table
 The following is used to obtain a table with values of different angles, velocity, distance, elongation and shape index.
-**MATLAB Code: 'generatingtable.m'
-<img width="500" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65c981c0-d1f6-4aae-b776-d96e8a33311c">
+**MATLAB Code: 'generatingtable.m'**
+
+<img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65c981c0-d1f6-4aae-b776-d96e8a33311c">
