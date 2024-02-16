@@ -14,7 +14,7 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 |   | 2.4. [Saving output files](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#24-saving-output-files)|
 | 3. | [Binarization](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#3-binarization) |
 | 4. | [Processing binarized image](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#4-processing) |
-| 5. | [Analyse Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyse-particles) |
+| 5. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyse-particles) |
 | 6. | Generation of table |
 | 7. | Generation of plots |
 
@@ -80,9 +80,28 @@ From the obtained **'Binary_image_001'**, processing is performed to reduce back
 <img width="485" alt="Remove_outliers" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/694cdf43-f7e0-40d4-8c64-d78c986dcbf2">
 
 - Process > Binary > Options > Erode > Set 'iteration' according to your image segmentation
+- Process > Binary > Fill Holes
 <img width="193" alt="Erode" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d57df4a9-6990-4e62-9ebb-944879873fcf">
 
 - Save as **'Binary_image_processed_001'**
-<img width="563" alt="Binary_image_processed" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/f2b0e022-7ff3-47c2-a322-e4122f4697a6">
+![Binary_image_processed](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/efc31196-2ba6-494a-97b4-99c4a06bc51f)
 
-# 5. Analyse Particles
+# 5. Analyze Particle
+Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale)
+- Analyze > Analyze Particles > Set Size according to cell size range
+<img width="208" alt="Analyze_particles" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/efda3d69-0c01-4862-98c9-dec8b1ee0759">
+
+## Files to Save
+1. ROI set
+2. Drawing of Binary_image_processed_001 (for visualization and reference number)
+3. Results as .csv
+
+- For ellipse visualisation > **Code: 'ellipse_visualisation.ijm'**
+- ROI set can be used for overlaying of outline to the ellipse
+<img width="487" alt="Processed_stack_with_overlay" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/0fa68579-a643-424d-87fd-4e820f526483">
+- Save as 'Processed_stack_ellipses.tif'
+
+# 6. Generation of table
+The following is used to obtain a table with values of different angles, velocity, distance, elongation and shape index.
+**MATLAB Code: 'generatingtable.m'
+
