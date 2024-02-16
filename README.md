@@ -31,7 +31,7 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
 ## 2.1. Save your raw data file (time-lapse video) in .tif format
   - Make sure the bright-field videos are of higher resolution and of lesser background noise
   - The file should contain 't' slices, where t indicates the number of timeframes. Example: For a time-lapse of 2 hours with images taken every 2 minutes, there would be 61 frames (including at point t=0).
-<img width="563" alt="raw_file" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d935ad37-6801-4afd-9510-af4aba3efa41">
+<img width="500" alt="raw_file" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d935ad37-6801-4afd-9510-af4aba3efa41">
 
 ## 2.2. Segmentation
   - Open .tif file in Fiji
@@ -58,10 +58,10 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
 
 ## 2.4. Saving Output Files:
 1. **'Create result'** - Save as 'classified_image_001' (.tif)
-<img width="563" alt="Classified_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/3495bfd3-4ae7-40bf-b5d2-7dd2174f83fa">
+<img width="500" alt="Classified_image" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/3495bfd3-4ae7-40bf-b5d2-7dd2174f83fa">
 
 2. **'Get probability'** - Save as 'Probability_maps_001' (.tif)
-<img width="544" alt="Probability_maps" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/8e0a649c-93f2-430f-adae-679805bdabb8">
+<img width="500" alt="Probability_maps" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/8e0a649c-93f2-430f-adae-679805bdabb8">
 
 3. Save **'Classifier model'** if done by Method 1
 
@@ -99,9 +99,10 @@ Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale
 - For ellipse visualisation > **Code: 'ellipse_visualisation.ijm'**
 - ROI set can be used for overlaying of outline to the ellipse
 <img width="487" alt="Processed_stack_with_overlay" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/0fa68579-a643-424d-87fd-4e820f526483">
+
 - Save as 'Processed_stack_ellipses.tif'
 
 # 6. Generation of table
 The following is used to obtain a table with values of different angles, velocity, distance, elongation and shape index.
 **MATLAB Code: 'generatingtable.m'
-
+<img width="500" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65c981c0-d1f6-4aae-b776-d96e8a33311c">
