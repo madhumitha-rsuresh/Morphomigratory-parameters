@@ -112,6 +112,8 @@ The following is used to obtain a table with values of different angles, velocit
 
 ## 6.2. Entropy Table and histogram generation
 **MATLAB Code: 'entropycalculation.m'**
+Sample histogram for a single-cell: <img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/c90e18bd-3538-4c67-a23c-229da108dd62">
 
 ## 6.3. Plot generation
 **MATLAB Code: 'parameterplots.m'**
+Sample parameter plot for a single-cell: <img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/5a120244-980a-4c25-befa-75dcf599300d">
