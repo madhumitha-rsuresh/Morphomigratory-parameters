@@ -87,9 +87,11 @@ From the obtained **'Binary_image_001'**, processing is performed to reduce back
 
 - Save as **'Binary_image_processed_001'**
 <img width = "500" serc = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/efc31196-2ba6-494a-97b4-99c4a06bc51f">
+
 # 5. Analyze Particle
 Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale)
 - Analyze > Analyze Particles > Set Size according to cell size range
+
 <img width="208" alt="Analyze_particles" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/efda3d69-0c01-4862-98c9-dec8b1ee0759">
 
 ## Files to Save
@@ -112,8 +114,8 @@ The following is used to obtain a table with values of different angles, velocit
 
 ## 6.2. Entropy Table and histogram generation
 **MATLAB Code: 'entropycalculation.m'**
-Sample histogram for a single-cell: <img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/c90e18bd-3538-4c67-a23c-229da108dd62">
+Sample histogram for a single-cell: <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/c90e18bd-3538-4c67-a23c-229da108dd62">
 
 ## 6.3. Plot generation
 **MATLAB Code: 'parameterplots.m'**
-Sample parameter plot for a single-cell: <img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/5a120244-980a-4c25-befa-75dcf599300d">
+Sample parameter plot for a single-cell: <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/5a120244-980a-4c25-befa-75dcf599300d">
