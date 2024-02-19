@@ -15,8 +15,10 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 | 3. | [Binarization](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#3-binarization) |
 | 4. | [Processing binarized image](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#4-processing) |
 | 5. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyse-particles) |
-| 6. | [Generation of table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#6-generation-of-table) |
-| 7. | Generation of plots |
+| 6. | [Generation of tables and plots](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#6-generation-of-table) |
+|   | 6.1. [Parameters table]() |
+|   | 6.2. [Entropy table]() |
+|   | 6.3. [Parameters plots]() |
 
 # 1. Required Softwares/Plugins <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96" width = 25px height = 25px> <img src = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482" width = 25px height = 25px>
 - Fiji (Image processor)
@@ -101,11 +103,15 @@ Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale
 
 - Save as 'Processed_stack_ellipses.tif'
 
-# 6. Generation of table
+# 6. Generation of tables and plots
 The following is used to obtain a table with values of different angles, velocity, distance, elongation and shape index.
+## 6.1. Parameters table generation
 **MATLAB Code: 'tablegeneration.m'**
 
 <img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/fe4aeb37-d37e-4537-b949-549522d58f41">
 
-# 7. Generation of plots
+## 6.2. Entropy Table and histogram generation
+**MATLAB Code: 'entropycalculation.m'**
 
+## 6.3. Plot generation
+**MATLAB Code: 'parameterplots.m'**
