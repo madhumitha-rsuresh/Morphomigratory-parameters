@@ -16,9 +16,9 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 | 4. | [Processing binarized image](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#4-processing) |
 | 5. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyse-particles) |
 | 6. | [Generation of tables and plots](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#6-generation-of-table) |
-|   | 6.1. [Parameters table]() |
-|   | 6.2. [Entropy table]() |
-|   | 6.3. [Parameters plots]() |
+|   | 6.1. [Parameters table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#61-parameters-table-generation) |
+|   | 6.2. [Entropy table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#62-entropy-table-and-histogram-generation) |
+|   | 6.3. [Parameters plots](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#63-plot-generation) |
 
 # 1. Required Softwares/Plugins <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96" width = 25px height = 25px> <img src = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482" width = 25px height = 25px>
 - Fiji (Image processor)
