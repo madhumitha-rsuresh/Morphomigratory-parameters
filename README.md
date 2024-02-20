@@ -90,6 +90,7 @@ From the obtained **'Binary_image_001'**, processing is performed to reduce back
 
 # 5. Analyze Particle
 Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale)
+- Set measurements > Fit ellipse, Area, Perimeter, Centroid, Shape descriptors, Stack position :ballot_box_with_check: 
 - Analyze > Analyze Particles > Set Size according to cell size range
 
 <img width="208" alt="Analyze_particles" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/efda3d69-0c01-4862-98c9-dec8b1ee0759">
@@ -107,10 +108,16 @@ Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale
 
 # 6. Generation of tables and plots
 The following is used to obtain a table with values of different angles, velocity, distance, elongation and shape index.
+- The results will have information of all the particles/cells/objects for every stack in one sheet
+- Copy it into a new excel sheet - **Results_001_working.xlsx**
+- Sort each object of every time frame (i.e. every slice) manually into specific sheets and label it as 'Object1', 'Object2' and so on.
+- The example column order used is shown below (Time has been added manually)
+<img width="656" alt="excel_sheet" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/0165e1af-aabe-4365-8550-a944b8873183">
+
 ## 6.1. Parameters table generation
 **MATLAB Code: 'tablegeneration.m'**
 
-<img width="700" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/fe4aeb37-d37e-4537-b949-549522d58f41">
+![parameter range](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/7cb0cd3b-16d3-483e-be55-84efc6ab4482)
 
 ## 6.2. Entropy Table and histogram generation
 **MATLAB Code: 'entropycalculation.m'**
