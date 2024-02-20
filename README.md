@@ -54,7 +54,7 @@ The below steps are for segmenting single cells from bright-field time-lapse vid
 <img width="824" alt="Segmentation process" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/4deb6227-806d-438e-abd7-e9e02f9de2c0">
 
 #### Method 2
-- Some trained models have been uploaded in the folder 'classifer models' for cell types - OVCAR3 and SKOV3.
+- Some trained models have been uploaded in the folder **'classifer models'** for cell types - OVCAR3 and SKOV3.
 - Click on **'Load Classifier'** and upload the given model.
 - Click on **'Create result'**
 
