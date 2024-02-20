@@ -64,7 +64,7 @@ diffColumnNames2 = strcat('DiffColNext', arrayfun(@num2str, columnsToDiff2, 'Uni
 extractedTable(:, diffColumnNames2) = array2table(differenceColumns2);
 
 % Custom column headers
-customHeaders = {'Time', 'Area', 'CentroidX', 'CentroidY', 'Perimeter', 'MajorAxis', 'MinorAxis', 'MajorAxisangle', ...
+customHeaders = {'Time', 'Area', 'CentroidX', 'CentroidY', 'Perimeter', 'MajorAxis', 'MinorAxis', 'MajorAxisangle', 'Solidity' ...
     'mjX', 'mjY', 'pdx', 'pdy', 'MAdynamics', 'sdx', 'sdy'};
 
 % Creating a new table with custom headers for the difference columns 
