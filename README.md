@@ -14,7 +14,7 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 |   | 2.4. [Saving output files](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#24-saving-output-files)|
 | 3. | [Binarization](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#3-binarization) |
 | 4. | [Processing binarized image](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters#4-processing) |
-| 5. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyse-particles) |
+| 5. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyze-particle) |
 | 6. | [Generation of tables and plots](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#6-generation-of-table) |
 |   | 6.1. [Parameters table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#61-parameters-table-generation) |
 |   | 6.2. [Entropy table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#62-entropy-table-and-histogram-generation) |
