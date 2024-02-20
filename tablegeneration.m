@@ -1,6 +1,6 @@
 % Excel file and sheet accewss
 cd ('D:\IISc_stuffs\Project files_Data analysis\Part 5 - Metric\Aurox\OVCAR3_Aurox_2hrsevery2mins\on collagen_2hrsevery2mins\Collagen_1mgml_20.12.23_Aurox_2hrsevery2mins_set1\crop1')
-excelFile = 'Results_001_working.xlsx';
+excelFile = 'Results_001_working.xlsx'; %access to the specific excel file
 sheetName = 'object1';
 
 % Read the entire table from the specified sheet
@@ -21,7 +21,7 @@ customHeaders = {'Time', 'Area', 'CentroidX', 'CentroidY', 'Perimeter', 'MajorAx
 % Creating a new table with custom headers for the difference columns
 extractedTable = table(selectedTable{:, 1}, selectedTable{:, 2}, selectedTable{:, 3}, -abs(selectedTable{:, 4}), selectedTable{:, 5}, selectedTable{:, 6}, selectedTable{:, 7}, selectedTable{:, 8}, selectedTable{:, 9}, 'VariableNames', customHeaders);
 
-% ITERATION
+% ITERATION - to get major axis end points
 for row = 1:size(extractedTable, 1)
     
     % majoraxis, centroid coordinates 
@@ -43,7 +43,7 @@ for row = 1:size(extractedTable, 1)
     extractedTable.mjY(row) = mjY;
 end
 
-% OBTAINING DISPLACEMENT VECTOR
+% OBTAINING DISPLACEMENT VECTOR and Major Axis dynamics
 % Specify the columns for which you want to calculate differences
 columnsToDiff1 = [3, 4, 8];
 columnsToDiff2 = [3, 4];
@@ -101,7 +101,7 @@ resultTable.meansolidity = NaN(height(resultTable), 1);
 resultTable.meanvelocity(1,1) = mean(subdata{:,3},'omitnan');
 resultTable.meand2p(1,1) = mean(subdata{:,2},'omitnan');
 resultTable.accumulateddistance(1,1) = sum(subdata{:,2},'omitnan');
-resultTable.meansolidity(1,1) = mean(subdata{:,3});
+resultTable.meansolidity(1,1) = mean(subdata{:,1});
 
 % Display the resulting table
 %disp(resultTable);
