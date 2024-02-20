@@ -1,13 +1,13 @@
 % Excel file and sheet accewss
 cd ('D:\IISc_stuffs\Project files_Data analysis\Part 5 - Metric\Aurox\OVCAR3_Aurox_2hrsevery2mins\on collagen_2hrsevery2mins\Collagen_1mgml_20.12.23_Aurox_2hrsevery2mins_set1\crop1')
 excelFile = 'Results_001_working.xlsx';
-sheetName = 'object10';
+sheetName = 'object1';
 
 % Read the entire table from the specified sheet
 data = readtable(excelFile, 'Sheet', sheetName, 'ReadVariableNames', false, 'Range', 'A:Z', 'HeaderLines', 1);
 
 % Columns and Rows to be extracted
-columnsToExtract = 2:9;
+columnsToExtract = [2:9,13];
 rowstoExtract = 1:size(data,1);
 
 % Read the specified columns into a table
@@ -16,10 +16,10 @@ dataTable = readtable(excelFile, 'Sheet', sheetName, 'ReadVariableNames', ...
 selectedTable = dataTable(rowstoExtract, columnsToExtract);
 
 % Custom column headers
-customHeaders = {'Time', 'Area', 'CentroidX', 'CentroidY', 'Perimeter', 'MajorAxis', 'MinorAxis', 'MajorAxisangle'};
+customHeaders = {'Time', 'Area', 'CentroidX', 'CentroidY', 'Perimeter', 'MajorAxis', 'MinorAxis', 'MajorAxisangle', 'Solidity'};
 
 % Creating a new table with custom headers for the difference columns
-extractedTable = table(selectedTable{:, 1}, selectedTable{:, 2}, selectedTable{:, 3}, -abs(selectedTable{:, 4}), selectedTable{:, 5}, selectedTable{:, 6}, selectedTable{:, 7}, selectedTable{:, 8}, 'VariableNames', customHeaders);
+extractedTable = table(selectedTable{:, 1}, selectedTable{:, 2}, selectedTable{:, 3}, -abs(selectedTable{:, 4}), selectedTable{:, 5}, selectedTable{:, 6}, selectedTable{:, 7}, selectedTable{:, 8}, selectedTable{:, 9}, 'VariableNames', customHeaders);
 
 % ITERATION
 for row = 1:size(extractedTable, 1)
@@ -70,7 +70,7 @@ customHeaders = {'Time', 'Area', 'CentroidX', 'CentroidY', 'Perimeter', 'MajorAx
 % Creating a new table with custom headers for the difference columns 
 % (p - previous (n-1) && s - successive (n+1))
 resultTable = table(extractedTable{:, 1}, extractedTable{:, 2}, extractedTable{:, 3}, extractedTable{:, 4}, ...
-    extractedTable{:, 5}, extractedTable{:, 6}, extractedTable{:, 7}, extractedTable{:, 8}, extractedTable{:, 9}, extractedTable{:, 10}, extractedTable{:, 11}, extractedTable{:, 12}, extractedTable{:, 13}, differenceColumns2(:, 1), differenceColumns2(:, 2), 'VariableNames', customHeaders);
+    extractedTable{:, 5}, extractedTable{:, 6}, extractedTable{:, 7}, extractedTable{:, 8}, extractedTable{:, 9}, extractedTable{:, 10}, extractedTable{:, 11}, extractedTable{:, 12}, extractedTable{:, 13}, extractedTable{:, 14} differenceColumns2(:, 1), differenceColumns2(:, 2), 'VariableNames', customHeaders);
 
 for i = 1:(height(resultTable))
     resultTable.d2p(i) = sqrt((resultTable.pdx(i)^2)+(resultTable.pdy(i)^2));
@@ -93,13 +93,15 @@ for i = 2:(height(resultTable))
 end
 
 % average and sum calculation
-subdata = resultTable(:,[16,20]);
+subdata = resultTable(:,[9,17,21]);
 resultTable.meanvelocity = NaN(height(resultTable), 1);
 resultTable.meand2p = NaN(height(resultTable), 1);
 resultTable.accumulateddistance = NaN(height(resultTable), 1);
-resultTable.meanvelocity(1,1) = mean(subdata{:,2},'omitnan');
-resultTable.meand2p(1,1) = mean(subdata{:,1},'omitnan');
-resultTable.accumulateddistance(1,1) = sum(subdata{:,1},'omitnan');
+resultTable.meansolidity = NaN(height(resultTable), 1);
+resultTable.meanvelocity(1,1) = mean(subdata{:,3},'omitnan');
+resultTable.meand2p(1,1) = mean(subdata{:,2},'omitnan');
+resultTable.accumulateddistance(1,1) = sum(subdata{:,2},'omitnan');
+resultTable.meansolidity(1,1) = mean(subdata{:,3});
 
 % Display the resulting table
 %disp(resultTable);
@@ -108,7 +110,7 @@ resultTable.accumulateddistance(1,1) = sum(subdata{:,1},'omitnan');
  outputExcelFile = 'output_parameters_001.xlsx';
 
 % Specify the sheet name
-sheetName = 'object10';
+sheetName = 'object1';
 
 % Write the table to Excel
 writetable(resultTable, outputExcelFile, 'Sheet', sheetName);
