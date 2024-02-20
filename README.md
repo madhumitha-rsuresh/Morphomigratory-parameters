@@ -111,14 +111,14 @@ The following is used to obtain a table with values of different angles, velocit
 - The results will have information of all the particles/cells/objects for every stack in one sheet
 - Copy it into a new excel sheet - **Results_001_working.xlsx**
 - Sort each object of every time frame (i.e. every slice) manually into specific sheets and label it as 'Object1', 'Object2' and so on.
-- The example column order used is shown below (Time has been added manually)
+- The example column order used is shown below (Time addition and sorting has been done manually)
 <img width="656" alt="excel_sheet" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/0165e1af-aabe-4365-8550-a944b8873183">
 
 ## 6.1. Parameters table generation
 **MATLAB Code: 'tablegeneration.m'**
 
-![parameter range](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/7cb0cd3b-16d3-483e-be55-84efc6ab4482)
-
+ ![parameter range](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/825a9cb2-02df-4ef1-8f8e-1d4b8241bece)
+ 
 ## 6.2. Entropy Table and histogram generation
 **MATLAB Code: 'entropycalculation.m'**
 
