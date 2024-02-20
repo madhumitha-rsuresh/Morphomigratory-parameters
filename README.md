@@ -86,7 +86,7 @@ From the obtained **'Binary_image_001'**, processing is performed to reduce back
 <img width="193" alt="Erode" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/d57df4a9-6990-4e62-9ebb-944879873fcf">
 
 - Save as **'Binary_image_processed_001'**
-<img width = "500" serc = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/efc31196-2ba6-494a-97b4-99c4a06bc51f">
+<img width = "500" src = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/cae00b81-4e2c-4e1f-8825-087ca244b969">
 
 # 5. Analyze Particle
 Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale)
