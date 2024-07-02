@@ -19,6 +19,7 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 |   | 6.1. [Parameters table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#61-parameters-table-generation) |
 |   | 6.2. [Entropy table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#62-entropy-table-and-histogram-generation) |
 |   | 6.3. [Parameters plots](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#63-plot-generation) |
+|   | 6.4. [MSD and RMS(metric)] (
 
 # 1. Required Softwares/Plugins <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96" width = 25px height = 25px> <img src = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482" width = 25px height = 25px>
 - Fiji (Image processor)
@@ -28,7 +29,7 @@ The morphological state and migratory dynamics of cells are widely imaged and an
     - MATLAB
 
 # 2. Image Segmentation
-The below steps are for segmenting single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, starting from Step 3.
+The below steps are for segmenting single cells from bright-field time-lapse videos. The following can be extended to flourescent videos too, by normal thresholding and then starting from Step 3.
 
 ## 2.1. Save your raw data file (time-lapse video) in .tif format
   - Make sure the bright-field videos are of higher resolution and of lesser background noise
@@ -116,15 +117,12 @@ The following is used to obtain a table with values of different angles, velocit
 
 ## 6.1. Parameters table generation
 **MATLAB Code: 'tablegeneration.m'**
-
- ![parameter range](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/825a9cb2-02df-4ef1-8f8e-1d4b8241bece)
  
 ## 6.2. Entropy Table and histogram generation
 **MATLAB Code: 'entropycalculation.m'**
 
-Sample histogram for a single-cell: <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/c90e18bd-3538-4c67-a23c-229da108dd62">
-
 ## 6.3. Plot generation
 **MATLAB Code: 'parameterplots.m'**
 
-Sample parameter plot for a single-cell: <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/5a120244-980a-4c25-befa-75dcf599300d">
+## 6.4. MSD and RMS(metric) calculation
+**MATLAB Code: 'MSD_Calculation.m'**
