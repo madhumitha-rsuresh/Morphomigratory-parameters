@@ -23,6 +23,7 @@ The below steps are for getting binarized image stacks from time-lapse videos co
 ## Save your raw data file (time-lapse video) in .tif format
   - Make sure the videos are of higher resolution and of lesser background noise
   - The file should contain 't' slices, where t indicates the number of timeframes. Example: For a time-lapse of 2 hours with images taken every 2 minutes, there would be 61 frames (including at point t=0).
+
 ![C1-014_crop1_slice35](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/02876ce2-b166-4ad8-966c-2c4146feb990)
 
 ## Thresholding and Binarization
