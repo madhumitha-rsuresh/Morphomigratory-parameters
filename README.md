@@ -54,7 +54,7 @@ The following is used to obtain a table with values of different angles, velocit
 - The example column order used is shown below (Time addition and sorting has been done manually)
 <img width="656" alt="excel_sheet" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/0165e1af-aabe-4365-8550-a944b8873183">
 
-- **Parameters table generation** - 'tablegeneration.m'
-- **Entropy Table and histogram generation** - 'entropycalculation.m'
-- **Parameter Plot generation** - 'parameterplots.m'
-- **MSD and RMS(metric) calculation** - 'MSD_Calculation.m'
+1. **Parameters table generation** - 'tablegeneration.m'
+2. **Entropy Table and histogram generation** - 'entropycalculation.m'
+3. **Parameter Plot generation** - 'parameterplots.m'
+4. **MSD and RMS(metric) calculation** - 'MSD_Calculation.m'
