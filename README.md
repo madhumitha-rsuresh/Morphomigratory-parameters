@@ -6,14 +6,13 @@ The morphological state and migratory dynamics of cells are widely imaged and an
 # Table of Contents
 | S.No. | Title | 
 | -- | -------- |
-| 1. | [Required Softwares/Plugins](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#1-required-softwaresplugins--) |
-| 2. | [Image Processing](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#2-image-segmentation) 
-| 3. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters?tab=readme-ov-file#5-analyze-particle) |
-| 4. | [Generation of tables and plots](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#6-generation-of-table) |
+| 1. | [Required Softwares/Plugins](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/tree/main?tab=readme-ov-file#1-required-softwaresplugins--) |
+| 2. | [Image Processing](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/tree/main?tab=readme-ov-file#2-image-processing) 
+| 3. | [Analyze Particles](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/tree/main?tab=readme-ov-file#3-analyze-particle) |
+| 4. | [Generation of tables and plots]([https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/blob/main/README.md#6-generation-of-table](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/tree/main?tab=readme-ov-file#4-generation-of-tables-and-plots)) |
 
 # 1. Required Softwares/Plugins <img src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/1dbc9cef-6b4f-471c-aea6-16a070519b96" width = 25px height = 25px> <img src = "https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/65329143-8596-4f18-ad01-529964233482" width = 25px height = 25px>
 - Fiji (Image processor)
-- Trainable Weka Segmentation (plugin)
 - Codes used:
     - ImageJ Macro
     - MATLAB
@@ -30,7 +29,7 @@ The below steps are for getting binarized image stacks from time-lapse videos co
   - Open .tif file in Fiji
   - Image > Adjust > Brightness/Contrast
   - Image > Adjust > Threshold (Auto) > Apply > Create new stack > **Save** this file as **Binarized_image**
-![Binary_image_slice35](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/f20d6108-fac9-4e58-84cb-1e4a896af6d4)
+![adj](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/26075d6e-7edd-465d-89b6-f53edf549e2e) ![Binary_image_slice35](https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/f20d6108-fac9-4e58-84cb-1e4a896af6d4)
 
 # 3. Analyze Particle
 Note: Make sure the scale is set before analyzing the image (Analyze > Set Scale)
@@ -54,14 +53,7 @@ The following is used to obtain a table with values of different angles, velocit
 - The example column order used is shown below (Time addition and sorting has been done manually)
 <img width="656" alt="excel_sheet" src="https://github.com/madhumitha-rsuresh/Morphomigratory-parameters/assets/88226429/0165e1af-aabe-4365-8550-a944b8873183">
 
-## 4.1. Parameters table generation
-**MATLAB Code: 'tablegeneration.m'**
- 
-## 4.2. Entropy Table and histogram generation
-**MATLAB Code: 'entropycalculation.m'**
-
-## 4.3. Plot generation
-**MATLAB Code: 'parameterplots.m'**
-
-## 4.4. MSD and RMS(metric) calculation
-**MATLAB Code: 'MSD_Calculation.m'**
+**Parameters table generation** - 'tablegeneration.m'
+**Entropy Table and histogram generation** - 'entropycalculation.m'
+**Parameter Plot generation** - 'parameterplots.m'
+**MSD and RMS(metric) calculation** - 'MSD_Calculation.m'
