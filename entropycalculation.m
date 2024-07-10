@@ -227,7 +227,7 @@ for s = 1:length(sheetNames)
     set(gcf, 'Units', 'normalized', 'OuterPosition', [0, 0, 1, 1]);
     
     % Specify the folder where you want to save the figures
-    plotfolder = 'D:\IISc_stuffs\Project work\Project files_Data analysis\Part 1 - Metric\Epi\OVCAR3 Data\OVCAR3 - Stiffness\SET 1 - 14.05.2024\19.7kPa\008\plots';  % Replace with the actual path
+    plotfolder = 'D:\008\plots';  % Replace with the actual path
     
     % Save the figure with the same name as the sheet
     figFilename = ['Entropy_', sheetNames{s}, '.png'];  % Define figure filename
