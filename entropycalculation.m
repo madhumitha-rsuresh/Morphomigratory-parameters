@@ -106,7 +106,7 @@ for s = 1:length(sheetNames)
     binEdges4 = linspace(0, 180, numBins+1);
     [counts, binEdges] = histcounts(resultTable.RTA, binEdges4);
     histogram(resultTable.RTA, binEdges, 'Normalization','count');
-    title(ax4, 'Turning angle')
+    title(ax4, 'RTA')
     
     % Calculate the total number of data points
     totalDataPoints = sum(counts);
