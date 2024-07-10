@@ -1,6 +1,6 @@
 % Excel file and sheet access
-cd('D:\IISc_stuffs\Project work\Project files_Data analysis\Part 1 - Metric\Epi\SKOV3 Data\SKOV3_Stiffness\SET 4 - 14.05.2024\19.7kPa\026')
-inputexcelfile = 'Results_026_working.xlsx';
+cd('D:\008')
+inputexcelfile = 'Results_008_working.xlsx';
 
 % Get the sheet names from the input Excel file
 sheetNames = sheetnames(inputexcelfile);
@@ -105,7 +105,7 @@ for s = 2:length(sheetNames)
         'VariableNames', {'Step_Size_Minutes', 'MSD', 'MSV', 'RMS(GTA)', 'RMS(RTA)', 'RMS(Elongation)'});
 
     % Specify output Excel file name
-    outputexcelfile = 'MSV_MSD_026.xlsx';
+    outputexcelfile = 'MSV_MSD_008.xlsx';
 
     % Write the table to Excel
     outputSheetName = sheetNames{s};
