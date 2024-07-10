@@ -1,5 +1,5 @@
 % Excel file and sheet access
-cd ('D:\IISc_stuffs\Project work\Project files_Data analysis\Part 1 - Metric\Epi\OVCAR3 Data\OVCAR3 - Stiffness\SET 1 - 14.05.2024\19.7kPa\008')
+cd ('D:\008')
 inputexcelfile = 'output_parameters_008_new.xlsx';
 
 % Get the sheet names from the input Excel file
@@ -21,7 +21,7 @@ for s = 1:length(sheetNames)
     figure;
     t = tiledlayout(3, 3, 'TileSpacing', 'compact');
 
-    % Create displacaement vector plot
+    % Create GTA plot
     ax1 = nexttile;
     h1 = plot(resultTable.Time, resultTable.GTA, '-o');
     ylim([-180,180]);
@@ -37,15 +37,15 @@ for s = 1:length(sheetNames)
     xlabel('Time (min)');
     title('MA Dynamics distribution');
     
-    % Create MA and displacament vector plot
+    % Create MA and displacament vector (uMM angle) plot
     ax3 = nexttile;
-    h3 = plot(resultTable.Time, resultTable.MA_disp_angle, '-o');
+    h3 = plot(resultTable.Time, resultTable.uMM, '-o');
     ylim([0,90]);
     ylabel('uMM angle');
     xlabel('Time (min)');
     title('uMM angle distribution');
     
-    % Create Turning angle plot
+    % Create Relative Turning angle plot
     ax4 = nexttile;
     h4 = plot(resultTable.Time, resultTable.RTA, '-o');
     ylim([0,180]);
@@ -89,7 +89,7 @@ for s = 1:length(sheetNames)
     set(gcf, 'Units', 'normalized', 'OuterPosition', [0, 0, 1, 1]);
     
     % Specify the folder where you want to save the figures
-    plotfolder = 'D:\IISc_stuffs\Project work\Project files_Data analysis\Part 1 - Metric\Epi\OVCAR3 Data\OVCAR3 - Stiffness\SET 1 - 14.05.2024\19.7kPa\008\plots';  % Replace with the actual path
+    plotfolder = 'D:\008\plots';  % Replace with the actual path
     
     % Save the figure with the same name as the sheet
     figFilename = ['Plot_', sheetNames{s}, '.png'];  % Define figure filename
