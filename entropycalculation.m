@@ -12,7 +12,7 @@ for s = 1:length(sheetNames)
     data = xlsread(inputexcelfile, sheetNames{s});
 
     % Specify the range to include header row
-    dataRange = 'A:AE';  % Adjust this based on your actual range
+    dataRange = 'A:AF';  % Adjust this based on your actual range
 
     % Read the table with correct headers
     resultTable = readtable(inputexcelfile, 'Sheet', sheetNames(s), 'Range', dataRange);
@@ -20,8 +20,8 @@ for s = 1:length(sheetNames)
     % OBTAINING HISTOGRAM & GENERATING A TABLE
     % Create a new table with appropriate variable names
     entropyTable = table();
-    customHeaders = {'meanvelocity', 'meand2p', 'accumulateddistance', 'euclideandistance', 'persistenceratio', 'meansolidity', 'meanelongation', 'varelongation', 'meanshapeindex', 'maxvelocity'};
-    entropyTable = table(resultTable{1,22}, resultTable{1,23}, resultTable{1,24}, resultTable{1,25}, resultTable{1,26}, resultTable{1,27}, resultTable{1,28}, resultTable{1,29}, resultTable{1,30}, resultTable{1,31}, 'VariableNames', customHeaders); 
+    customHeaders = {'meanvelocity', 'meand2p', 'accumulateddistance', 'euclideandistance', 'persistenceratio', 'meansolidity', 'meanelongation', 'varelongation', 'meanshapeindex', 'maxvelocity', 'meanuMM'};
+    entropyTable = table(resultTable{1,22}, resultTable{1,23}, resultTable{1,24}, resultTable{1,25}, resultTable{1,26}, resultTable{1,27}, resultTable{1,28}, resultTable{1,29}, resultTable{1,30}, resultTable{1,31}, resultTable{1,32}, 'VariableNames', customHeaders); 
     
     % Specify the number of bins
     numBins = 5; entropyTable.numberofbins(1,1) = numBins;
