@@ -1,5 +1,5 @@
 % Excel file and sheet access
-cd ('D:\IISc_stuffs\Project work\Project files_Data analysis\Part 1 - Metric\Epi\OVCAR3 Data\OVCAR3 - Stiffness\SET 1 - 14.05.2024\19.7kPa\008') %change directory accordingly
+cd ('D:\008') %change directory accordingly
 inputexcelfile = 'Results_008_working.xlsx'; % change excel sheet file accordingly
 
 % Get the sheet names from the input Excel file
@@ -75,7 +75,7 @@ for s = 2:length(sheetNames) % start from 2nd sheet, skipping the main raw sheet
         extractedTable{:, 5}, extractedTable{:, 6}, extractedTable{:, 7}, extractedTable{:, 8}, extractedTable{:, 9}, extractedTable{:, 10}, extractedTable{:, 11}, extractedTable{:, 12}, extractedTable{:, 13}, extractedTable{:, 14}, 'VariableNames', customHeaders);
 
     % Create column names for the new variables
-    newColumnNames = {'d2p', 'GTA', 'MA_disp_angle', 'RTA', 'velocity', 'elongation', 'shapeindex', 'meanvelocity', 'meand2p', 'accumulateddistance', 'euclideandistance', 'persistenceratio', 'meansolidity', 'meanelongation', 'varelongation', 'meanshapeindex', 'maxvelocity'};
+    newColumnNames = {'d2p', 'GTA', 'uMM', 'RTA', 'velocity', 'elongation', 'shapeindex', 'meanvelocity', 'meand2p', 'accumulateddistance', 'euclideandistance', 'persistenceratio', 'meansolidity', 'meanelongation', 'varelongation', 'meanshapeindex', 'maxvelocity', 'meanuMM'};
 
     % Add NaN columns with the specified names
     resultTable{:, newColumnNames} = NaN(height(resultTable), numel(newColumnNames));
@@ -85,11 +85,11 @@ for s = 2:length(sheetNames) % start from 2nd sheet, skipping the main raw sheet
         resultTable.GTA(i) = atan2d(resultTable.pdy(i),resultTable.pdx(i));
         pdotproduct = (resultTable.mjX(i)*resultTable.pdx(i+1))+(resultTable.mjY(i)*resultTable.pdy(i+1));
         pdisplacementvectormagnitude = sqrt((resultTable.pdx(i+1)*resultTable.pdx(i+1))+(resultTable.pdy(i+1)*resultTable.pdy(i+1)));
-        resultTable.MA_disp_angle(i) = acosd(pdotproduct/(pdisplacementvectormagnitude*resultTable.MajorAxis(i)));
-        if resultTable.MA_disp_angle(i)>90
-            resultTable.MA_disp_angle(i) = 180 - resultTable.MA_disp_angle(i); %to get acute angle
+        resultTable.uMM(i) = acosd(pdotproduct/(pdisplacementvectormagnitude*resultTable.MajorAxis(i)));
+        if resultTable.uMM(i)>90
+            resultTable.uMM(i) = 180 - resultTable.uMM(i); %to get acute angle
         end
-        resultTable.MA_disp_angle(i) = resultTable.MA_disp_angle(i); 
+        resultTable.uMM(i) = resultTable.uMM(i); 
     end
     
     for i = 2:(height(resultTable)-1)
@@ -113,6 +113,7 @@ for s = 2:length(sheetNames) % start from 2nd sheet, skipping the main raw sheet
     resultTable.varelongation(1,1) = round(var(resultTable{:,20},'omitnan'),3);
     resultTable.meanshapeindex(1,1) = round(mean(resultTable{:,21},'omitnan'),2);
     resultTable.maxvelocity(1,1) = round(max(resultTable{:,19}),2);
+    resultTable.meanuMM(1,1) = round(mean(resultTable{:,17}),2);
 
     % Display the resulting table
     %disp(resultTable);
