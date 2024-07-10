@@ -1,5 +1,5 @@
 % Excel file and sheet access
-cd ('D:\IISc_stuffs\Project work\Project files_Data analysis\Part 1 - Metric\Epi\OVCAR3 Data\OVCAR3 - Stiffness\SET 1 - 14.05.2024\19.7kPa\008')
+cd ('D:\008')
 inputexcelfile = 'output_parameters_008_new.xlsx';
 
 % Get the sheet names from the input Excel file
@@ -36,7 +36,7 @@ for s = 1:length(sheetNames)
     ylabel(t,'Count');
     title(t,'Histogram');
     
-    % DISPLACEMENT VECTOR ANGLE
+    % GLOBAL TURNING ANGLE
     ax1 = nexttile;
     [counts, binEdges] = histcounts(resultTable.GTA, binEdges1);
     histogram(ax1, resultTable.GTA, binEdges1, 'Normalization','count');
@@ -79,12 +79,12 @@ for s = 1:length(sheetNames)
     txt = {'Entropy:', Entropy};
     text('Units', 'normalized', 'Position', [0.90, 0.85], 'String', txt, 'HorizontalAlignment', 'right');
     
-    % MA AND DISP. VECTOR ANGLE
+    % MA AND DISP. VECTOR ANGLE (uMM angle)
     ax3 = nexttile;
     binEdges3 = linspace(0, 90, numBins+1);
-    [counts, binEdges] = histcounts(resultTable.MA_disp_angle, binEdges3);
-    histogram(resultTable.MA_disp_angle, binEdges, 'Normalization','count');
-    title(ax3, 'MA and Disp.vector angle')
+    [counts, binEdges] = histcounts(resultTable.uMM, binEdges3);
+    histogram(resultTable.uMM, binEdges, 'Normalization','count');
+    title(ax3, 'uMM angle')
     
     % Calculate the total number of data points
     totalDataPoints = sum(counts);
@@ -97,11 +97,11 @@ for s = 1:length(sheetNames)
     
     %entropy
     Entropy = round(sum(transformedProbabilities/-log2(1/numBins)),2);
-    entropyTable.MA_disp_angle_entropy(1,1) = Entropy;
+    entropyTable.uMM_entropy(1,1) = Entropy;
     txt = {'Entropy:', Entropy};
     text('Units', 'normalized', 'Position', [0.90, 0.85], 'String', txt, 'HorizontalAlignment', 'right');
     
-    % TURNING ANGLE
+    % RELATIVE TURNING ANGLE
     ax4 = nexttile;
     binEdges4 = linspace(0, 180, numBins+1);
     [counts, binEdges] = histcounts(resultTable.RTA, binEdges4);
